@@ -26,11 +26,11 @@ jobs:
       run: dotnet restore Sheas-Cealer-Droid.csproj
 
     - name: Build MAUI Android APK
-      run: dotnet publish Sheas-Cealer-Droid.csproj -c Release -f:net10.0-android36.0 /p:AndroidPackageFormat=apk
+      run: dotnet publish Sheas-Cealer-Droid.csproj -c Release -f:net9.0-android /p:AndroidPackageFormat=apk
 
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
       with:
         name: maui-apk
         path: |
-          **/bin/Release/net10.0-android36.0/publish/*.apk
+          **/bin/Release/net9.0-android/publish/*.apk
