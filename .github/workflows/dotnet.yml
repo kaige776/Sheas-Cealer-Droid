@@ -33,4 +33,4 @@ jobs:
       with:
         name: maui-apk
         path: |
-          **/bin/Release/net9.0-android/publish/*.apk
+          **/bin/Release/net10.0-android36.0/publish/*.apk
